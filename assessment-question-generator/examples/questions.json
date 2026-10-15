@@ -1,0 +1,198 @@
+{
+  "quiz_title": "Sample Quiz: Algorithm Analysis",
+  "description": "Five questions on Big-O and searching. Questions 4a and 4b are variants; each student sees one.",
+  "points_per_question": 1,
+  "shuffle_answers": false,
+  "groups": {
+    "G1": {
+      "title": "Binary search trace (variants)",
+      "pick": 1
+    }
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "stem": "What is the worst-case time complexity of linear search on an unsorted array of n elements?",
+      "options": [
+        {
+          "text": "O(n)",
+          "correct": true,
+          "rationale": "In the worst case the target is last or absent, so all n elements are checked."
+        },
+        {
+          "text": "O(log n)",
+          "correct": false,
+          "rationale": "Confuses linear search with binary search, which needs a sorted array."
+        },
+        {
+          "text": "O(1)",
+          "correct": false,
+          "rationale": "Describes the best case (target is first), not the worst case."
+        },
+        {
+          "text": "O(n log n)",
+          "correct": false,
+          "rationale": "Mixes in the cost of sorting first; linear search does not sort."
+        }
+      ],
+      "outcome": "Topic: Big-O analysis",
+      "bloom": "Remember",
+      "difficulty": "easy",
+      "source": "Example notes, section 1"
+    },
+    {
+      "id": "Q2",
+      "stem": "A loop runs `for i in range(n)` and, inside it, `for j in range(n)`. Each inner step does constant work. What is the total time complexity?",
+      "options": [
+        {
+          "text": "O(n)",
+          "correct": false,
+          "rationale": "Counts only the outer loop and ignores that the inner loop runs n times per outer step."
+        },
+        {
+          "text": "O(2n)",
+          "correct": false,
+          "rationale": "Adds the loops instead of multiplying them; nested loops multiply."
+        },
+        {
+          "text": "O(n^2)",
+          "correct": true,
+          "rationale": "The inner loop runs n times for each of n outer iterations: n x n = n^2 steps."
+        },
+        {
+          "text": "O(log n)",
+          "correct": false,
+          "rationale": "Logarithmic time needs the problem size to shrink by a factor each step, which does not happen here."
+        }
+      ],
+      "outcome": "Topic: Big-O analysis",
+      "bloom": "Apply",
+      "difficulty": "easy",
+      "source": "Example notes, section 1"
+    },
+    {
+      "id": "Q3",
+      "stem": "Which condition must hold before binary search can be used on an array?",
+      "options": [
+        {
+          "text": "The array contains no duplicate values",
+          "correct": false,
+          "rationale": "Binary search works with duplicates; it may just find any one of them."
+        },
+        {
+          "text": "The array length is a power of two",
+          "correct": false,
+          "rationale": "Midpoints are rounded, so any length works."
+        },
+        {
+          "text": "The array is stored in contiguous memory",
+          "correct": false,
+          "rationale": "Random access helps performance, but the required condition is ordering."
+        },
+        {
+          "text": "The array is sorted by the search key",
+          "correct": true,
+          "rationale": "Discarding half the array each step is only valid if the elements are in order."
+        }
+      ],
+      "outcome": "Topic: Searching",
+      "bloom": "Understand",
+      "difficulty": "easy",
+      "source": "Example notes, section 2"
+    },
+    {
+      "id": "Q4a",
+      "group": "G1",
+      "stem": "Binary search looks for 15 in the sorted array below, using mid = (low + high) // 2 with indices starting at 0. Which values are compared with 15, in order?",
+      "stem_code": "[3, 8, 15, 23, 42, 57, 61]",
+      "options": [
+        {
+          "text": "3, 8, 15",
+          "correct": false,
+          "rationale": "Traces a linear search from the start instead of a binary search."
+        },
+        {
+          "text": "23, 8, 15",
+          "correct": true,
+          "rationale": "mid = 3 (23 > 15, high = 2); mid = 1 (8 < 15, low = 2); mid = 2 (15 found)."
+        },
+        {
+          "text": "23, 15",
+          "correct": false,
+          "rationale": "After the first comparison, steps one position left instead of recomputing mid = (0 + 2) // 2 = 1."
+        },
+        {
+          "text": "23, 3, 8, 15",
+          "correct": false,
+          "rationale": "After setting high = 2, scans the remaining half from its start instead of recomputing the midpoint."
+        }
+      ],
+      "outcome": "Topic: Searching",
+      "bloom": "Apply",
+      "difficulty": "medium",
+      "source": "Example notes, section 2"
+    },
+    {
+      "id": "Q4b",
+      "group": "G1",
+      "stem": "Binary search looks for 61 in the sorted array below, using mid = (low + high) // 2 with indices starting at 0. Which values are compared with 61, in order?",
+      "stem_code": "[3, 8, 15, 23, 42, 57, 61]",
+      "options": [
+        {
+          "text": "23, 57, 61",
+          "correct": true,
+          "rationale": "mid = 3 (23 < 61, low = 4); mid = 5 (57 < 61, low = 6); mid = 6 (61 found)."
+        },
+        {
+          "text": "23, 42, 61",
+          "correct": false,
+          "rationale": "Moves low to 4 but then compares index 4 instead of recomputing mid = (4 + 6) // 2 = 5."
+        },
+        {
+          "text": "42, 57, 61",
+          "correct": false,
+          "rationale": "Starts at index 4 by using the 1-based middle position (7 // 2 + 1) instead of mid = (0 + 6) // 2 = 3."
+        },
+        {
+          "text": "23, 61",
+          "correct": false,
+          "rationale": "Skips the second midpoint, as if the search jumped to the last element after one comparison."
+        }
+      ],
+      "outcome": "Topic: Searching",
+      "bloom": "Apply",
+      "difficulty": "medium",
+      "source": "Example notes, section 2"
+    },
+    {
+      "id": "Q5",
+      "stem": "An algorithm halves the remaining input on every step until one element is left. Roughly how many steps does it take for an input of 1,024 elements?",
+      "options": [
+        {
+          "text": "512",
+          "correct": false,
+          "rationale": "Halves the input once and reports the remaining size instead of counting steps."
+        },
+        {
+          "text": "1,024",
+          "correct": false,
+          "rationale": "Counts one step per element, which is linear behavior."
+        },
+        {
+          "text": "32",
+          "correct": false,
+          "rationale": "Takes the square root of 1,024 instead of the base-2 logarithm."
+        },
+        {
+          "text": "10",
+          "correct": true,
+          "rationale": "1,024 = 2^10, so halving reaches one element after log2(1,024) = 10 steps."
+        }
+      ],
+      "outcome": "Topic: Big-O analysis",
+      "bloom": "Apply",
+      "difficulty": "medium",
+      "source": "Example notes, section 1"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ self-contained skill with its own README, scripts and tests.
 |---|---|
 | [canvas-accessibility](canvas-accessibility/) | Audits and fixes accessibility issues in Word and PowerPoint files, and audits PDFs, before posting to Canvas |
 | [canvas-rubric-builder](canvas-rubric-builder/) | Builds an analytic rubric from an assignment sheet and exports a CSV for Canvas's Import Rubric tool |
+| [assessment-question-generator](assessment-question-generator/) | Writes multiple-choice questions with rationales from lecture material, with optional variants, and exports a Canvas QTI quiz |
 
 More skills will be added as they are cleaned up for release.
 

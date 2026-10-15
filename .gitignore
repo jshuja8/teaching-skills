@@ -3,4 +3,5 @@ __pycache__/
 .venv/
 tests/fixtures/
 *.zip
+!*/examples/*.zip
 .DS_Store
