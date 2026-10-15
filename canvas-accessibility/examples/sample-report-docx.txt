@@ -1,0 +1,30 @@
+=== DOCX accessibility check: docx_bad.docx ===
+
+8 issue(s) found, 0 check(s) passed.
+
+ISSUES
+------------------------------------------------------------
+[FAIL] No heading structure
+       The document has substantial text but no paragraph uses a Heading or Title style. Bold/large text LOOKS like a heading but isn't tagged as one -- screen readers and Canvas's outline/navigation view rely on the actual style, not the visual formatting.
+
+[FAIL] Table 1: first row may need header marking -- verify before fixing
+       This table has multiple rows and columns, which is necessary but NOT sufficient for needing a header row. Read the actual cell content: mark the first row as a header (w:tblHeader) ONLY if it functions as a column label that's still true for every row below it (e.g. 'Kitchen concept | Computer concept' above a list of matched pairs). If the first row is itself a data value specific to that row (e.g. a positional label like 'Top' paired with content, where later rows have a blank or different value in that same column), it is NOT a header row -- marking it as one makes a screen reader misdescribe every row below it. When in doubt, give the table alt text instead and leave the header flag off.
+
+[FAIL] Table 1: no alt text
+       Give this table a short title + description (Table Properties > Alt Text in Word, stored as tblCaption/tblDescription) so a screen reader announces what it's for before reading the cells.
+
+[FAIL] Image "Picture 1": no alt text
+       This image has no alternative text and isn't marked decorative. If it conveys information (a diagram, screenshot, chart), add a concise description. If it's purely visual flourish, mark it decorative instead of leaving it blank.
+
+[FAIL] Image "Picture 2": alt text is just a filename/placeholder ("image2.png")
+       Word sometimes fills alt text with the source filename or a generic label. That passes a blank check but tells a screen reader user nothing. Replace it with a real description.
+
+[FAIL] Hyperlink text "click here."
+       Screen reader users often scan a list of links out of context. Generic text like this doesn't say where the link goes -- use something descriptive, e.g. 'Week 1 syllabus (PDF)' instead of 'click here'.
+
+[FAIL] No document title set
+       The file's Title property (File > Info in Word) is empty, so Canvas and screen readers may announce the raw filename instead of a readable title.
+
+[FAIL] Language set only on individual styles, not as the document default
+       Some styles carry a language tag, but the document-wide default (w:docDefaults > w:rPrDefault in styles.xml) does not, so text in other styles may be read with the wrong pronunciation rules. Set the default language (Review > Language > Set Proofing Language, with 'Set As Default').
+

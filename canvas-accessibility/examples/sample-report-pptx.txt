@@ -1,0 +1,21 @@
+=== PPTX accessibility check: pptx_bad.pptx ===
+
+5 issue(s) found, 0 check(s) passed.
+
+ISSUES
+------------------------------------------------------------
+[FAIL] Slide 1: no title placeholder
+       This slide has no Title placeholder at all. Even if there's large bold text that looks like a heading, without the placeholder a screen reader user tabbing through slides has no way to identify what this slide is about. Use Insert > Layout with a title, or the Outline view, rather than a plain text box.
+
+[FAIL] Slide 1: "Picture 2" alt text is just a filename/placeholder ("IMG_4521.png")
+       PowerPoint auto-fills alt text with the source filename or a generic label like 'Picture 2' -- that passes a blank check but tells a screen reader user nothing about what's actually shown. Replace it with a real description of the content.
+
+[FAIL] Slide 2: "Picture 3" has no alt text
+       Add a concise description of what this image/chart shows, or mark it decorative if it's purely visual.
+
+[FAIL] Slide 2: table missing header row flag
+       This table has multiple rows/columns but isn't marked with a header row. In PowerPoint, select the table > Table Design > check 'Header Row' so screen readers announce column labels.
+
+[FAIL] Duplicate slide title "Overview" (slides 2, 3)
+       Screen reader users often jump between slides by title. Identical titles on multiple slides make it impossible to tell them apart without opening each one -- add a distinguishing word, e.g. 'Grading (1 of 2)' / 'Grading (2 of 2)'.
+
