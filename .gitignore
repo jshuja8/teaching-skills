@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+tests/fixtures/
+*.zip
+.DS_Store
