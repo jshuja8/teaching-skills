@@ -7,6 +7,7 @@ self-contained skill with its own README, scripts and tests.
 | Skill | What it does |
 |---|---|
 | [canvas-accessibility](canvas-accessibility/) | Audits and fixes accessibility issues in Word and PowerPoint files, and audits PDFs, before posting to Canvas |
+| [canvas-rubric-builder](canvas-rubric-builder/) | Builds an analytic rubric from an assignment sheet and exports a CSV for Canvas's Import Rubric tool |
 
 More skills will be added as they are cleaned up for release.
 

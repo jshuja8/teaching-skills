@@ -1,0 +1,50 @@
+{
+  "rubric_title": "Research Poster Rubric",
+  "total_points": 50,
+  "criteria": [
+    {
+      "name": "Research Question",
+      "description": "States a focused question the poster sets out to answer.",
+      "outcome": "LO1",
+      "ratings": [
+        {"level": "Exemplary",  "points": 10, "description": "The question is stated in one sentence near the top, names a specific population or system, and is narrow enough to answer with the data shown."},
+        {"level": "Proficient", "points": 8,  "description": "The question is stated and specific, but it is broader than the data shown can fully answer."},
+        {"level": "Developing", "points": 5,  "description": "A topic is named, but it is phrased as a subject area rather than a question, or the reader has to infer the question."},
+        {"level": "Beginning",  "points": 2,  "description": "No question can be identified; the poster describes a topic without saying what it investigates."}
+      ]
+    },
+    {
+      "name": "Use of Evidence",
+      "description": "Supports each claim with data or cited sources.",
+      "outcome": "LO2",
+      "ratings": [
+        {"level": "Exemplary",  "points": 20, "description": "Every claim is backed by data shown on the poster or a cited source, and each figure is referenced in the text that interprets it."},
+        {"level": "Proficient", "points": 16, "description": "Most claims are backed by data or citations; one or two claims rely on assertion alone."},
+        {"level": "Developing", "points": 10, "description": "Data or citations appear, but several claims are not connected to them, or figures are shown without interpretation."},
+        {"level": "Beginning",  "points": 4,  "description": "Claims are made without data or citations, or the data shown does not relate to the claims."}
+      ]
+    },
+    {
+      "name": "Visual Organization",
+      "description": "Arranges content so a viewer can follow it in a logical order.",
+      "outcome": "LO3",
+      "ratings": [
+        {"level": "Exemplary",  "points": 12, "description": "Sections follow a clear reading path (question, method, results, conclusion) with headings, and every figure has a caption and labeled axes."},
+        {"level": "Proficient", "points": 9,  "description": "Sections follow a reading path with headings; one or two figures lack captions or axis labels."},
+        {"level": "Developing", "points": 6,  "description": "Headings exist, but the reading order is unclear, or several figures lack captions or labels."},
+        {"level": "Beginning",  "points": 2,  "description": "No headings or reading path; text and figures are placed without an order the viewer can follow."}
+      ]
+    },
+    {
+      "name": "Citations",
+      "description": "Credits sources in a consistent citation style.",
+      "outcome": "LO4",
+      "ratings": [
+        {"level": "Exemplary",  "points": 8, "description": "All sources are cited in one consistent style, and every in-text citation matches an entry in the reference list."},
+        {"level": "Proficient", "points": 6, "description": "All sources are cited; there are minor style inconsistencies or one mismatched reference."},
+        {"level": "Developing", "points": 4, "description": "Some sources are cited, but the style is inconsistent or several in-text citations have no matching reference."},
+        {"level": "Beginning",  "points": 1, "description": "Sources are used but not cited, or citations cannot be matched to any reference."}
+      ]
+    }
+  ]
+}
